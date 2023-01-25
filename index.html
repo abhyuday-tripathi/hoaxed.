@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>hoaxed.</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand logo">hoaxed.</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#plans" class="nav-link">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a href="#board-members" class="nav-link">Board Of Members</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Became a <span class="text-warning">Pen Fight Master</span></h1>
+            <p class="lead my-4">
+              Our name comes from the time when we were reading the newspaper,
+              but then a word that stood-out from the others, 'hoaxed', gave us
+              the idea for this company.
+            </p>
+            <button
+              class="btn btn-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#checkout"
+            >
+              Checkout The Pens
+            </button>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="./img/showcase.svg"
+            alt="Showcase"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact for Queries -->
+    <section class="bg-primary text-light p-5">
+      <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <h3 class="mb-3 mb-md-0">Contact Us for Bulk Orders</h3>
+          <div class="input-group contact-input">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter Your Email"
+            />
+            <button class="btn btn-dark btn-lg" type="button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans -->
+
+    <section class="p-5" id="plans">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md">
+            <div class="card bg-primary-subtle text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3"><i class="bi bi-piggy-bank-fill"></i></div>
+                <h3 class="card-title mb-3">Basic</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+                  tempora saepe a temporibus itaque obcaecati.
+                </p>
+                <a href="#" class="btn btn-outline-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-success bg-success-subtle text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3"><i class="bi bi-wallet-fill"></i></div>
+                <h3 class="card-title mb-3">Standard</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+                  tempora saepe a temporibus itaque obcaecati.
+                </p>
+                <a href="#" class="btn btn-outline-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-danger-subtle text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-currency-exchange"></i>
+                </div>
+                <h3 class="card-title mb-3">Cursed</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+                  tempora saepe a temporibus itaque obcaecati.
+                </p>
+                <a href="#" class="btn btn-outline-danger">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="p-5" id="questions">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                Who customizes these pens?
+              </button>
+            </h2>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis explicabo ex ab commodi rerum nam culpa, modi
+                laboriosam at ullam nihil, ipsam esse, animi quis alias?
+                Corrupti deserunt in, voluptatum eveniet repudiandae accusamus
+                veritatis autem ut vel, similique numquam ratione et voluptates
+                vero. Cum vel perspiciatis fugit accusamus iure assumenda.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                What is the cost of these pens?
+              </button>
+            </h2>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
+                tempora atque quibusdam quam laudantium ad vel consectetur non
+                molestiae nostrum possimus, debitis rem iure, dicta harum?
+                Molestiae esse soluta quia deleniti veniam sequi expedita
+                placeat magni iure officia illum id odit nobis, ducimus nihil
+                nemo tenetur facere amet dolorem? In!
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                How can I buy one of these?
+              </button>
+            </h2>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                iste laborum ad ducimus tempora et quia ipsum repudiandae. Earum
+                illo eaque dolor id culpa sed iure officia accusantium quaerat
+                incidunt atque reprehenderit molestias iste necessitatibus,
+                nobis consequatur expedita, tenetur suscipit numquam placeat!
+                Velit amet totam obcaecati ducimus ex error rem!
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+                Is there a refund policy?
+              </button>
+            </h2>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                iste laborum ad ducimus tempora et quia ipsum repudiandae. Earum
+                illo eaque dolor id culpa sed iure officia accusantium quaerat
+                incidunt atque reprehenderit molestias iste necessitatibus,
+                nobis consequatur expedita, tenetur suscipit numquam placeat!
+                Velit amet totam obcaecati ducimus ex error rem!
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-five"
+              >
+                How can I share my feedback?
+              </button>
+            </h2>
+            <div
+              id="question-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                iste laborum ad ducimus tempora et quia ipsum repudiandae. Earum
+                illo eaque dolor id culpa sed iure officia accusantium quaerat
+                incidunt atque reprehenderit molestias iste necessitatibus,
+                nobis consequatur expedita, tenetur suscipit numquam placeat!
+                Velit amet totam obcaecati ducimus ex error rem!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Board of Members -->
+    <section id="board-members" class="p-5 bg-primary">
+      <div class="container">
+        <h2 class="text-center text-white">Board of Members</h2>
+        <p class="lead text-center text-white mb-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+          neque!
+        </p>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <span class="badge bg-secondary">Co-Founder</span>
+
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/2.jpg"
+                  alt="img"
+                  class="rounded-circle mb-3"
+                />
+                <h3 class="card-title mb-3">Vinayak Mishra</h3>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Cumque ipsam, quisquam in ea tempore illum?
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <span class="badge bg-success">Co-Founder, CEO</span>
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/11.jpg"
+                  alt="img"
+                  class="rounded-circle mb-3"
+                />
+                <h3 class="card-title mb-3">Abhyuday Tripathi</h3>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Cumque ipsam, quisquam in ea tempore illum?
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <span class="badge bg-secondary">Head of Supply</span>
+
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/20.jpg"
+                  alt="img"
+                  class="rounded-circle mb-3"
+                />
+                <h3 class="card-title mb-3">Vasu Yadav</h3>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Cumque ipsam, quisquam in ea tempore illum?
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <span class="badge bg-secondary">Head of Marketing</span>
+
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/12.jpg"
+                  alt="img"
+                  class="rounded-circle mb-3"
+                />
+                <h3 class="card-title mb-3">Akhil Pal</h3>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Cumque ipsam, quisquam in ea tempore illum?
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> Sector-6, Jankipuram
+                Extension
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Phone:</span> +919999999999
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Email:</span> hoaxedpens@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2023 <strong>hoaxed</strong></p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="checkout"
+      tabindex="-1"
+      aria-labelledby="checkoutLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="checkoutLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label"
+                  >First Name</label
+                >
+                <input type="text" class="form-control" id="first-name" />
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Last Name</label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="phone-num" class="col-form-label"
+                  >Phone Number</label
+                >
+                <input type="tel" class="form-control" id="phone-num" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script>
+      var map = L.map("map").setView(
+        [26.939944641661544, 80.9429564386774],
+        13
+      );
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 60,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+    </script>
+  </body>
+</html>

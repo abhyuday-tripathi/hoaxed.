@@ -18,6 +18,10 @@ body::before {
   font-weight: 900;
 }
 
+.heading {
+  font-weight: 700;
+}
+
 @media (min-width: 768px) {
   .contact-input {
     width: 50%;
